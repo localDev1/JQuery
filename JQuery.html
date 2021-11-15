@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+</body>
+  
+<script>
+
+    //following along with the Instructor and performing the same actions
+    $("html").append(
+        "<body>\
+            <div id='container' style='text-align: center'>\
+                <div id ='inner'>\
+                    <h1> Basic JQuery</h1>\
+                    <p id = '1'>Paragraph 1</p>\
+                    <p id = '2'>Paragraph 2</p>\
+                    <p id = '3'>Paragraph 3</p><br>\
+                    <h2>JQUERY CHALLENGE</h2><br>\
+                    <p id ='4'>will change color by clicking on my!!</p><br><br>\
+                    <p id ='5'>disappear by clicking on my!!</p><br><br>\
+                </div>\
+            </div>\
+        </body>"
+    );
+    //change font color a element with id =2
+    $("#2").css({"color":"red"});
+    ////hidden a element h1 clicking element id =3
+    $("#3").click(function(){
+        $('h1').hide();
+    });
+    //JQUERY CHALLENGE
+    // jQuery events (change color)
+    $("#4").click(function(){
+        $('#4').css({"color":"blue"});
+    });
+
+    //jQuery effects (disappear)
+    $("#5").click(function(){
+        $('#5').slideUp(1000);
+    });
+
+
+</script>
+     
+
+
+</html>
