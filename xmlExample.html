@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<body>
+<p id="XML_Example"></p>
+</body>
+  
+<script>
+    //text
+    var Food = "<Food>" + 
+    "<Name>Chicken with Mole</Name>" + 
+    "<Side1>Fries</Side1>" + 
+    "<Side2>Avocado</Side2>" +
+    "<Size>small</Size>"+
+    "<Topping>cheese</Topping>" +
+    "</Food>";
+    
+    //creates an XML DOM parser
+    XML_parser = new DOMParser();
+
+    //Create a new XML DOM object using the text
+    XML_document = XML_parser.parseFromString(Food, "text/xml");
+
+    document.getElementById("XML_Example").innerHTML = XML_document.getElementsByTagName("Name")[0].childNodes[0].nodeValue;
+</script>
+     
+
+
+</html>
